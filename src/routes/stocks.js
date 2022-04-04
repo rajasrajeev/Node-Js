@@ -13,5 +13,6 @@ router.post('/testing-api', authController.test);
 router.get('/generate_agora_token',requireLogIn, authController.agoraAuthTokenGenerator);*/
 /* router.post('/create', commonController.createCompany);  */
 router.get('/get-stocks/:key', requireLogIn, stocksController.searchStocks); 
+router.get('/get--details/:id', requireLogIn, stocksController.stockDetails); 
 
 module.exports = router;
