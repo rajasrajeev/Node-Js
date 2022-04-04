@@ -1,0 +1,43 @@
+{
+  "name": "stocks",
+  "version": "0.1.0",
+  "description": "Sample Node JS Backend for Searching Stocks",
+  "main": "index.js",
+  "author": "Rajas Rajeev",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "eslint ./src index.js",
+    "lint-fix": "eslint --fix ./src index.js"
+  },
+  "dependencies": {
+    "agora-access-token": "^2.0.4",
+    "bcrypt": "^4.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.4.18",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^5.5.1"
+  },
+  "engines": {
+    "node": "^14.3.0",
+    "yarn": "^1.22.4"
+  }
+}
