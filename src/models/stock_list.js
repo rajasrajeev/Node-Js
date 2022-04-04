@@ -23,6 +23,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Current Price is required.',
         }
       },
+      get: function() {
+        return "₹ "+Math.round(this.getDataValue('current_price'));
+      }
     },
     market_cap: {
       type: DataTypes.FLOAT,
@@ -32,7 +35,11 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Market Cap is required.',
         }
       },
+      get: function() {
+        return "₹ "+Math.round(this.getDataValue('market_cap'));
+      }
     },
+    
     stock_pe: {
       type: DataTypes.FLOAT,
       allowNull: false,
@@ -41,6 +48,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Stock P/E is required.',
         }
       },
+      get: function() {
+        return this.getDataValue('stock_pe') + " %";
+      }
     },
     debt: {
       type: DataTypes.FLOAT,
@@ -50,6 +60,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Debt is required.',
         }
       },
+      get: function() {
+        return "₹ "+Math.round(this.getDataValue('debt'));
+      }
     },
     divident_yield: {
       type: DataTypes.FLOAT,
@@ -59,6 +72,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Divident Yield is required.',
         }
       },
+      get: function() {
+        return "₹ "+Math.round(this.getDataValue('divident_yield'));
+      }
     },
     roce: {
       type: DataTypes.FLOAT,
@@ -68,6 +84,10 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'ROCE is required.',
         }
       },
+      get: function() {
+        return this.getDataValue('roce') + " %";
+      }
+      
     },
     roe: {
       type: DataTypes.FLOAT,
@@ -77,6 +97,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'ROE is required.',
         }
       },
+      get: function() {
+        return this.getDataValue('roe') + " %";
+      }
     },
     debt_equity: {
       type: DataTypes.FLOAT,
@@ -86,6 +109,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Debt Equity is required.',
         }
       },
+      get: function() {
+        return this.getDataValue('debt_equity') + " %";
+      }
     },
     eps: {
       type: DataTypes.FLOAT,
@@ -95,6 +121,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'EPS is required.',
         }
       },
+      get: function() {
+        return "₹ "+Math.round(this.getDataValue('eps'));
+      }
     },
     reserves: {
       type: DataTypes.FLOAT,
@@ -104,6 +133,9 @@ module.exports = (sequelize, DataTypes) => {
           msg: 'Reserves is required',
         }
       },
+      get: function() {
+        return "₹ "+Math.round(this.getDataValue('reserves'));
+      }
     },
   }, { underscored: true, freezeTableName: true, });
 
